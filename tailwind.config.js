@@ -6,4 +6,4 @@ module.exports = {
   },
   plugins: [],
 }
-// npx tailwindcss -i ./docs/input.css -o ./dist/output.css --watch
+// npx tailwindcss -i ./docs/input.css -o ./docs/output.css --watch
