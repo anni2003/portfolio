@@ -624,10 +624,6 @@ video {
   justify-content: space-evenly;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .border-none {
   border-style: none;
 }
