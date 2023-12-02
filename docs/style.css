@@ -1,0 +1,169 @@
+*{
+   margin: 0%;
+   padding: 0%; 
+}
+.M{
+    font-size:x-large;
+  
+    border-radius: 4cm;
+}
+.chart{
+  
+    background-color:rgb(235, 168, 168);
+}
+
+
+  
+  
+  .task {
+    position: relative;
+  
+    overflow: hidden;
+    cursor: pointer;
+    
+    perspective: 800px;
+    transform-style: preserve-3d;
+  }
+  
+
+  
+  .abstract {
+    z-index: 10;
+    transition: .7s ease all;
+    font-family: cursive;
+  }
+  
+  .details {
+    max-height: 0;
+    padding: 0;
+    font-family:cursive;
+    overflow: hidden;
+    visibility: hidden;
+    
+    transform: rotateX(-180deg);
+    transform-origin: top center;
+    backface-visibility: hidden;
+    transition: .7s transform ease;
+    
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: grey;
+    }
+    
+    .task:hover & {
+      max-height: none;
+      overflow: visible;
+      visibility: visible;
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .details__inner {
+    padding: 15px 30px;
+  }
+
+.hero{
+    font-family: 'Titillium Web', sans-serif;
+    background: rgb(0,0,0);
+background: linear-gradient(151deg, rgba(0,0,0,0.9836309523809523) 18%, rgba(42,42,42,1) 63%, rgba(57,39,42,1) 82%);
+}
+
+/* .body2{
+    /* width:10000vh; */
+  
+
+    :root {
+        --starY: 0;
+        --starX: 0;
+        --starSize: 0;
+        --starColor: #FFFFFF;
+      }
+      
+      body{
+        margin: 0;
+      }
+      
+      .sky {
+        height: 90vh;
+        width: 100vw;
+        background: radial-gradient(#cb7d8f, #21243f 70%);
+        position: relative;
+        background-size: 400% 350%;
+        animation: AnimateSky 6s ease 1;
+        animation-fill-mode: forwards;
+        z-index: 0;
+      }
+      
+      @keyframes AnimateSky {
+          0%{background-position: 20% 20%;}
+          100%{background-position: 20% 100%;}
+      }
+      
+      .moon {
+        height: 40px;
+        width: 40px;
+        border-radius: 100px;
+        background-color: #f6eaeb;
+        position: absolute;
+        left: 80vw;
+        bottom: 0;
+        animation: AnimateMoon 6s ease 1;
+        animation-fill-mode: forwards;
+        z-index: 3;
+      }
+      
+      @keyframes AnimateMoon {
+          0%{top: 100%; border: rgb(228, 167, 145, .5) 1px solid;}
+          50%{border: rgb(228, 167, 145, .1) 14px solid;}
+          100%{top: 10%; border: rgb(228, 167, 145, .5) 3px solid;}
+          100%{top: 10%; border: rgb(228, 167, 145, .2) 9px solid;}
+      }
+      
+      .star {
+        height: var(--starSize);
+        width: var(--starSize);
+        position: absolute;
+        left: var(--starX);
+        bottom: var(--starY);
+        background-color: var(--starColor);
+        border-radius: 100px;
+        animation: AnimateStars 6s ease 1;
+        animation-fill-mode: forwards;
+        z-index: 2;
+      }
+      
+      @keyframes AnimateStars {
+          0%{opacity: 20%;}
+          100%{opacity: 100%;}
+      }
+      
+      .twinkle {
+        opacity: 1;
+        animation: AnimateTwinkle 2s ease infinite;
+        animation-fill-mode: forwards;
+      }
+      
+      .twinkle-other {
+         opacity: 1;
+        animation: AnimateTwinkleOther 3s ease infinite;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes AnimateTwinkle {
+          0%{opacity: 1;}
+        50%{opacity:0}
+          100%{opacity: 1;}
+      }
+      
+      @keyframes AnimateTwinkleOther {
+          0%{opacity: 1; border: solid 1px rgb( 233, 178, 21 .4);}
+        50%{opacity:0; border: solid 2px rgb( 233, 178, 21 .8)}
+          100%{opacity: 1; border: solid 1px rgb( 233, 178, 21, 1)}
+      }
+      
